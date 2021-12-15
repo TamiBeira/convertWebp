@@ -10,6 +10,7 @@ $webp = '.webp';
 $ponto = array_shift($imagens);
 $ponto = array_shift($imagens);
 
+echo exec('sudo whoami');
 /*Imprime o Array de imagens*/
 //print_r($imagens);
 
@@ -18,6 +19,7 @@ foreach($imagens as $imagem){
     $imagem = substr($imagem, 0,-4);
 
     /*Add extensões*/
+
     $entradaPNG = '/var/www/lynk/convertPHP/img/'.$imagem.$extensoes[0];
     $entradaJPG = '/var/www/lynk/convertPHP/img/'.$imagem.$extensoes[1];
     $entradaJPEG = '/var/www/lynk/convertPHP/img/'.$imagem.$extensoes[2];
@@ -25,9 +27,10 @@ foreach($imagens as $imagem){
     $saida = '/var/www/lynk/convertPHP/img_convert/'.$imagem .$webp;
 
     /*Realiza a conversão*/
-    exec("sudo /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaPNG} -o {$saida}");
-    exec("sudo /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaJPG} -o {$saida}");
-    exec("sudo /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaJPEG} -o {$saida}");
+
+    exec("cwebp /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaPNG} -o {$saida}");
+    exec("cwebp /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaJPG} -o {$saida}");
+    exec("cwebp /var/www/lynk/convertPHP/libwebp/examples/cwebp.c {$entradaJPEG} -o {$saida}");
 
     /*Imprime onde os arquivos foram salvos*/    
     echo "<p>{$saida}</p>";
