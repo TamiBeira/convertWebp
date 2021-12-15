@@ -27,12 +27,16 @@ uname -v = #45-Ubuntu SMP Fri Nov 5 11:37:01 UTC 2021
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /home/t4m1/.local/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
 PATH: /usr/bin
 PATH: /sbin
 PATH: /bin
+PATH: /usr/games
+PATH: /usr/local/games
+PATH: /snap/bin
 PATH: /snap/bin
 
 
@@ -148,7 +152,6 @@ configure:4184: ar cru libconftest.a conftest.o >&5
 ar: `u' modifier ignored since `D' is the default (see `U')
 configure:4187: $? = 0
 configure:4215: result: ar
-configure:4238: WARNING: Libtool does not cope well with whitespace in `pwd`
 configure:4282: checking how to print strings
 configure:4309: result: printf
 configure:4330: checking for a sed that does not truncate output
@@ -775,11 +778,11 @@ configure: failed program was:
 configure:13739: result: no
 configure:13637: checking whether pthreads work without any flags
 configure:13730: gcc -o conftest -g -O2     conftest.c   >&5
-/usr/bin/ld: /tmp/ccNsrYMw.o: in function `main':
-/home/t4m1/Área de Trabalho/libwebp-1.2.1/conftest.c:35: undefined reference to `pthread_create'
-/usr/bin/ld: /home/t4m1/Área de Trabalho/libwebp-1.2.1/conftest.c:36: undefined reference to `pthread_join'
-/usr/bin/ld: /home/t4m1/Área de Trabalho/libwebp-1.2.1/conftest.c:38: undefined reference to `__pthread_register_cancel'
-/usr/bin/ld: /home/t4m1/Área de Trabalho/libwebp-1.2.1/conftest.c:39: undefined reference to `__pthread_unregister_cancel'
+/usr/bin/ld: /tmp/cceggTaq.o: in function `main':
+/var/www/lynk/convertPHP/libwebp/conftest.c:35: undefined reference to `pthread_create'
+/usr/bin/ld: /var/www/lynk/convertPHP/libwebp/conftest.c:36: undefined reference to `pthread_join'
+/usr/bin/ld: /var/www/lynk/convertPHP/libwebp/conftest.c:38: undefined reference to `__pthread_register_cancel'
+/usr/bin/ld: /var/www/lynk/convertPHP/libwebp/conftest.c:39: undefined reference to `__pthread_unregister_cancel'
 collect2: error: ld returned 1 exit status
 configure:13730: $? = 1
 configure: failed program was:
@@ -2238,7 +2241,7 @@ lt_cv_truncate_bin='/usr/bin/dd bs=4096 count=1'
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/missing'\'' aclocal-1.16'
+ACLOCAL='${SHELL} '\''/var/www/lynk/convertPHP/libwebp/missing'\'' aclocal-1.16'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -2250,9 +2253,9 @@ AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
 AR='ar'
-AUTOCONF='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/missing'\'' autoconf'
-AUTOHEADER='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/missing'\'' autoheader'
-AUTOMAKE='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/missing'\'' automake-1.16'
+AUTOCONF='${SHELL} '\''/var/www/lynk/convertPHP/libwebp/missing'\'' autoconf'
+AUTOHEADER='${SHELL} '\''/var/www/lynk/convertPHP/libwebp/missing'\'' autoheader'
+AUTOMAKE='${SHELL} '\''/var/www/lynk/convertPHP/libwebp/missing'\'' automake-1.16'
 AWK='mawk'
 BUILD_ANIMDIFF_FALSE=''
 BUILD_ANIMDIFF_TRUE='#'
@@ -2313,7 +2316,7 @@ LIPO=''
 LN_S='ln -s'
 LTLIBOBJS=''
 LT_SYS_LIBRARY_PATH=''
-MAKEINFO='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/missing'\'' makeinfo'
+MAKEINFO='${SHELL} '\''/var/www/lynk/convertPHP/libwebp/missing'\'' makeinfo'
 MANIFEST_TOOL=':'
 MKDIR_P='/usr/bin/mkdir -p'
 NEON_FLAGS=''
@@ -2383,7 +2386,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} '\''/home/t4m1/Área de Trabalho/libwebp-1.2.1/install-sh'\'''
+install_sh='${SHELL} /var/www/lynk/convertPHP/libwebp/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
